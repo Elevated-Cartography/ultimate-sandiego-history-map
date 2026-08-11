@@ -1,0 +1,40 @@
+{
+    "maps": [
+        {
+            "file":"burbeck_1903.pmtiles",
+            "year": 1903,
+            "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~366836~90134177:Map-of-The-City-Of-San-Diego-Califo#",
+            "name": "Map of the City of San Diego Published by E.M. Burbeck",
+        },
+        {
+            "file":"shell_1956.pmtiles",
+            "year": 1956,
+            "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212288~5500336:Shell-Street-Map-of-San-Diego-#",
+            "name": "The map titled \"Shell Street Guide and Metropolitan Map of San Diego\" was authored by the Shell Oil Company and published in 1956. Measuring 46 cm by 69 cm, this work is part of a larger atlas, specifically designed for road navigation and distributed through Shell gas stations. The map, printed on both sides, is a detailed representation of San Diego, California, and was originally part of a collection bound for use by the San Francisco Examiner newspaper.",
+        },
+        {
+            "file":"lowell_1935.pmtiles",
+            "year": 1935,
+            "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~278749~90051775:Street-Map-of-San-Diego-City-#",
+            "name": "This work is titled \"Street Map of San Diego City,\" created by Lowell E. Jones in 1935. The map is a separate map type, with dimensions of 56 cm in width and 41 cm in height. The map was published by Lowell E. Jones, with printing or engraving by Frye & Smith. It is part of a publication with the Pub List No 9614.000 and is individually cataloged as List No 9614.003.",
+        },
+        {
+            "file":"bertrand_1844.pmtiles",
+            "year": 1844,
+            "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~1794~210007?qvq=q%3Amission%20bay%3Blc%3ARUMSEY~8~1&mi=223&trs=278#",
+            "name": "The image presents a historical map from the atlas titled \"Voyage de Mr. Duflot de Mofras,\" published in 1844 by Eugene Duflot de Mofras. This atlas, considered a significant pre-American occupation work on California, was published by Arthus Bertrand. The maps provided in this image are part of a larger collection detailing various geographic locations along the western coast of North America.",
+        },
+        {
+            "file":"mora_1928.pmtiles",
+            "year": 1928,
+            "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~289785~90061499:City-of-San-Diego---Reproduction-by#",
+            "name": "The work depicted is a pictorial map titled \"City of San Diego,\" created by Jo Mora in 2013 as a reproduction by the San Diego History Center. The original publication was by The Marston Company, celebrating its Golden Anniversary. The map measures 56 cm in width and 70 cm in height and is mounted on linen. Jo Mora, an artist-historian known for his diverse talents, created this map using a bird's eye view style that combines fun, historical knowledge, and a vibrant sense of color.",
+        },
+        {
+            "file":"pancal_1915.pmtiles",
+            "year": 1915,
+            "src_url": "https://pancalarchive.org/artifacts/map-3/",
+            "name": "Ground plan map, San Diego Exposition"
+        }
+    ]
+}
