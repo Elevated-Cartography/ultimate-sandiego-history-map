@@ -148,6 +148,31 @@
       "tileSize": 512
     },
     {
+      "id": "thomas_1938",
+      "file": "thomas_1938.pmtiles",
+      "title": "Thomas Bros. Map of San Diego, National City & La Mesa",
+      "year": 1938,
+      "author": "Thomas Bros.",
+      "publisher": "Thomas Bros.",
+      "source": "David Rumsey Historical Map Collection",
+      "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~248694~5516005:Thomas-Bros--Map-of-San-Diego,-Nati#",
+      "description": "This map is part of an atlas produced by Thomas Brothers, known for their road maps and atlases, specifically catering to automobile travel, which was gaining prominence during this period.",
+      "bounds": [
+        -117.289684,
+        32.65379,
+        -117.02971,
+        32.827202
+      ],
+      "center": [
+        -117.159697,
+        32.740496
+      ],
+      "minzoom": 0,
+      "maxzoom": 16,
+      "tileType": "avif",
+      "tileSize": 512
+    },
+    {
       "id": "shell_1956",
       "file": "shell_1956.pmtiles",
       "title": "Shell Street Guide and Metropolitan Map of San Diego",
