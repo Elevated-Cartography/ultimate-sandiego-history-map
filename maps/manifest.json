@@ -36,16 +36,16 @@
       "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~366836~90134177:Map-of-The-City-Of-San-Diego-Califo#",
       "description": "Map of the City of San Diego, California, published by E. M. Burbeck.",
       "bounds": [
-        -117.292162,
-        32.538273,
-        -117.038555,
-        32.834144
+        -117.292285,
+        32.537604,
+        -117.038256,
+        32.834961
       ],
       "center": [
-        -117.165358,
-        32.686208
+        -117.16527,
+        32.686282
       ],
-      "minzoom": 10,
+      "minzoom": 0,
       "maxzoom": 15,
       "tileType": "avif",
       "tileSize": 512
@@ -68,8 +68,8 @@
         -117.14945,
         32.732778
       ],
-      "minzoom": 14,
-      "maxzoom": 15,
+      "minzoom": 0,
+      "maxzoom": 18,
       "tileType": "avif",
       "tileSize": 512
     },
@@ -84,16 +84,16 @@
       "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~289785~90061499:City-of-San-Diego---Reproduction-by#",
       "description": "The work depicted is a pictorial map titled \"City of San Diego,\" created by Jo Mora in 2013 as a reproduction by the San Diego History Center. The original publication was by The Marston Company, celebrating its Golden Anniversary. The map measures 56 cm in width and 70 cm in height and is mounted on linen. Jo Mora, an artist-historian known for his diverse talents, created this map using a bird's eye view style that combines fun, historical knowledge, and a vibrant sense of color.",
       "bounds": [
-        -117.356603,
-        32.495402,
-        -116.94895,
-        32.912347
+        -117.348067,
+        32.506159,
+        -116.958721,
+        32.907669
       ],
       "center": [
-        -117.152777,
-        32.703874
+        -117.153394,
+        32.706914
       ],
-      "minzoom": 9,
+      "minzoom": 0,
       "maxzoom": 15,
       "tileType": "avif",
       "tileSize": 512
@@ -109,17 +109,41 @@
       "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~278749~90051775:Street-Map-of-San-Diego-City-#",
       "description": "This work is titled \"Street Map of San Diego City,\" created by Lowell E. Jones in 1935. The map is a separate map type, with dimensions of 56 cm in width and 41 cm in height. The map was published by Lowell E. Jones, with printing or engraving by Frye & Smith. It is part of a publication with the Pub List No 9614.000 and is individually cataloged as List No 9614.003.",
       "bounds": [
-        -117.292097,
-        32.661081,
-        -117.041817,
-        32.824365
+        -117.292942,
+        32.657596,
+        -117.041275,
+        32.825372
       ],
       "center": [
-        -117.166957,
-        32.742723
+        -117.167109,
+        32.741484
       ],
-      "minzoom": 10,
-      "maxzoom": 15,
+      "minzoom": 0,
+      "maxzoom": 17,
+      "tileType": "avif",
+      "tileSize": 512
+    },
+    {
+      "id": "calpac_1935",
+      "file": "calpac_1935.pmtiles",
+      "title": "Ground Plan, California Pacific International Exposition",
+      "year": 1935,
+      "publisher": "Hancock Oil Company of California",
+      "source": "California Pacific International Exposition Digital Archive",
+      "src_url": "https://cparchive.org/wp/wp-content/uploads/2020/03/map_1935_da_001_web.jpg",
+      "description": "Map of the grounds of the 1935 California Pacific International Exposition",
+      "bounds": [
+        -117.157652,
+        32.724119,
+        -117.143951,
+        32.739379
+      ],
+      "center": [
+        -117.150801,
+        32.731749
+      ],
+      "minzoom": 0,
+      "maxzoom": 18,
       "tileType": "avif",
       "tileSize": 512
     },
@@ -134,16 +158,16 @@
       "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212288~5500336:Shell-Street-Map-of-San-Diego-#",
       "description": "The map titled \"Shell Street Guide and Metropolitan Map of San Diego\" was authored by the Shell Oil Company and published in 1956. Measuring 46 cm by 69 cm, this work is part of a larger atlas, specifically designed for road navigation and distributed through Shell gas stations. The map, printed on both sides, is a detailed representation of San Diego, California, and was originally part of a collection bound for use by the San Francisco Examiner newspaper.",
       "bounds": [
-        -117.306402,
-        32.600546,
-        -117.035358,
-        32.903882
+        -117.308336,
+        32.597741,
+        -117.037706,
+        32.904772
       ],
       "center": [
-        -117.17088,
-        32.752214
+        -117.173021,
+        32.751256
       ],
-      "minzoom": 9,
+      "minzoom": 0,
       "maxzoom": 15,
       "tileType": "avif",
       "tileSize": 512
