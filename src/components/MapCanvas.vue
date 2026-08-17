@@ -16,6 +16,12 @@ import type { HistoricalMap, Layer } from '../types'
 
 const container = ref<HTMLDivElement>()
 const map = shallowRef<maplibregl.Map>()
+/**
+ * True between style.load and the next setStyle — i.e. whenever it is safe to
+ * add sources and layers. Not the same as map.isStyleLoaded(), which also waits
+ * on every tile and image of the base map and so is false most of the time.
+ */
+const styleReady = ref(false)
 
 const sourceId = (layer: Layer) => `hist-src-${layer.map.id}`
 const layerId = (layer: Layer) => `hist-${layer.map.id}`
@@ -96,7 +102,10 @@ onMounted(() => {
   m.addControl(new maplibregl.ScaleControl({ maxWidth: 100, unit: 'imperial' }), 'bottom-left')
 
   // Fires on the initial load and again after every setStyle, which wipes our layers.
-  m.on('style.load', addOverlays)
+  m.on('style.load', () => {
+    styleReady.value = true
+    addOverlays()
+  })
   m.on('move', () => (zoom.value = m.getZoom()))
   m.on('moveend', () => writeHash({ center: m.getCenter().toArray() as [number, number], zoom: m.getZoom() }))
   zoom.value = m.getZoom()
@@ -106,14 +115,17 @@ onBeforeUnmount(() => map.value?.remove())
 
 watch(baseStyleId, (id) => {
   const style = BASE_STYLES.find((s) => s.id === id)
-  if (style) map.value?.setStyle(style.url)
+  if (!style) return
+  // The old style's layers go away here and come back on the next style.load.
+  styleReady.value = false
+  map.value?.setStyle(style.url)
 })
 
 // Layers arrive after the manifest loads, which may be before or after style.load.
 watch(
   () => layers.value.length,
   () => {
-    if (map.value?.isStyleLoaded()) addOverlays()
+    if (styleReady.value) addOverlays()
   },
 )
 
