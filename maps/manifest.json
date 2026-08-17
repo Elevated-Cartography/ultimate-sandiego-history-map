@@ -26,6 +26,31 @@
       "tileSize": 512
     },
     {
+      "id": "bache_1853",
+      "file": "bache_1853.pmtiles",
+      "title": "San Diego Entrance and Approaches",
+      "year": 1853,
+      "author": "A.D. Bache, R.D. Cutts, Geo. Davidson, A.M. Harrison",
+      "publisher": "Survey of the Coast of the United States",
+      "source": "David Rumsey Historical Map Collection",
+      "src_url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~33374~1170799:San-Diego-Entrance-#",
+      "description": "This is a nautical chart showing the entrance and approaches to San Diego Bay.",
+      "bounds": [
+        -117.280802,
+        32.631618,
+        -117.162656,
+        32.73659
+      ],
+      "center": [
+        -117.221729,
+        32.684104
+      ],
+      "minzoom": 0,
+      "maxzoom": 17,
+      "tileType": "avif",
+      "tileSize": 512
+    },
+    {
       "id": "burbeck_1903",
       "file": "burbeck_1903.pmtiles",
       "title": "Map of the City of San Diego",
