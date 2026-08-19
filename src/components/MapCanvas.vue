@@ -12,6 +12,7 @@ import {
   zoom,
 } from '../store'
 import { siteUrl } from '../paths'
+import { useAnnotationLayers } from '../annotationLayers'
 import type { HistoricalMap, Layer } from '../types'
 
 const container = ref<HTMLDivElement>()
@@ -22,6 +23,8 @@ const map = shallowRef<maplibregl.Map>()
  * on every tile and image of the base map and so is false most of the time.
  */
 const styleReady = ref(false)
+
+const annotations = useAnnotationLayers(map, styleReady)
 
 const sourceId = (layer: Layer) => `hist-src-${layer.map.id}`
 const layerId = (layer: Layer) => `hist-${layer.map.id}`
@@ -69,6 +72,8 @@ function syncOrder() {
     const id = layerId(layers.value[i])
     if (m.getLayer(id)) m.moveLayer(id)
   }
+  // Restacking rasters would otherwise bury the annotation outlines.
+  annotations.raise()
 }
 
 onMounted(() => {
@@ -105,7 +110,9 @@ onMounted(() => {
   m.on('style.load', () => {
     styleReady.value = true
     addOverlays()
+    annotations.sync()
   })
+  annotations.attach(m)
   m.on('move', () => (zoom.value = m.getZoom()))
   m.on('moveend', () => writeHash({ center: m.getCenter().toArray() as [number, number], zoom: m.getZoom() }))
   zoom.value = m.getZoom()

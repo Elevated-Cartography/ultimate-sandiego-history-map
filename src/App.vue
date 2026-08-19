@@ -3,14 +3,18 @@ import { onMounted, ref } from 'vue'
 import MapCanvas from './components/MapCanvas.vue'
 import LayerDrawer from './components/LayerDrawer.vue'
 import MapInfoDialog from './components/MapInfoDialog.vue'
+import AnnotationSidebar from './components/AnnotationSidebar.vue'
 import { drawerOpen, loadManifest } from './store'
+import { loadAnnotationIndex } from './annotations'
 import type { HistoricalMap } from './types'
 
 const canvas = ref<InstanceType<typeof MapCanvas>>()
 
 const zoomTo = (map: HistoricalMap) => canvas.value?.flyTo(map)
 
-onMounted(() => loadManifest())
+// The index only says which maps have annotations; the annotations themselves
+// are fetched when their layer is first shown.
+onMounted(() => Promise.all([loadManifest(), loadAnnotationIndex()]))
 </script>
 
 <template>
@@ -25,6 +29,7 @@ onMounted(() => loadManifest())
     </button>
 
     <LayerDrawer @zoom="zoomTo" />
+    <AnnotationSidebar />
     <MapInfoDialog @zoom="zoomTo" />
   </main>
 </template>

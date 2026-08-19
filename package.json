@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "editor": "vite --open /editor.html",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
@@ -12,13 +13,19 @@
     "map:add": "node scripts/add-map.mjs"
   },
   "dependencies": {
+    "dompurify": "^3.4.13",
     "maplibre-gl": "^5.6.0",
+    "marked": "^18.0.10",
     "pmtiles": "^4.3.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@types/geojson": "^7946.0.16",
     "@types/node": "^20.19.43",
     "@vitejs/plugin-vue": "^5.2.1",
+    "sharp": "^0.35.3",
+    "terra-draw": "^1.32.3",
+    "terra-draw-maplibre-gl-adapter": "^1.4.1",
     "typescript": "~5.7.3",
     "vite": "^6.3.5",
     "vue-tsc": "^2.2.0"

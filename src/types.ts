@@ -36,3 +36,35 @@ export interface BaseStyle {
   label: string
   url: string
 }
+
+/* -------------------------------------------------------------- annotations -- */
+
+export interface AnnotationImage {
+  /** Site-relative path, e.g. "annotations/images/lowell_1935/a1b2.png". */
+  src: string
+  caption?: string
+}
+
+export interface AnnotationProperties {
+  title: string
+  /** Markdown, rendered in the sidebar. */
+  body: string
+  images: AnnotationImage[]
+}
+
+/**
+ * A single annotated area. The id is duplicated into properties because MapLibre
+ * paint expressions can read properties but not a Feature's top-level id.
+ */
+export type AnnotationFeature = GeoJSON.Feature<GeoJSON.Polygon, AnnotationProperties & { id: string }> & {
+  id: string
+}
+
+export interface AnnotationCollection extends GeoJSON.FeatureCollection<GeoJSON.Polygon> {
+  features: AnnotationFeature[]
+}
+
+/** annotations/index.json — the map ids that have at least one annotation. */
+export interface AnnotationIndex {
+  maps: string[]
+}
