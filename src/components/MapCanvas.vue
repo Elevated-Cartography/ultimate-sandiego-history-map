@@ -5,6 +5,7 @@ import {
   BASE_STYLES,
   DEFAULT_VIEW,
   baseStyleId,
+  checkArchive,
   layers,
   orderVersion,
   readHashCamera,
@@ -57,6 +58,16 @@ function addOverlays() {
     }
   }
   syncOrder()
+  checkVisible()
+}
+
+/**
+ * Confirms the archives behind the switched-on layers are actually readable, so
+ * that a missing or unreachable one shows up in the drawer instead of as an
+ * overlay that simply never arrives.
+ */
+function checkVisible() {
+  for (const layer of layers.value) if (layer.visible) void checkArchive(layer.map)
 }
 
 /**
@@ -148,6 +159,7 @@ watch(
       m.setLayoutProperty(layerId(layer), 'visibility', layer.visible ? 'visible' : 'none')
       m.setPaintProperty(layerId(layer), 'raster-opacity', layer.opacity)
     }
+    checkVisible()
     writeHash({ center: m.getCenter().toArray() as [number, number], zoom: m.getZoom() })
   },
 )

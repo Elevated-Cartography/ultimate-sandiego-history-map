@@ -1,6 +1,7 @@
 import { reactive, ref } from 'vue'
+import { probeArchive } from './archives'
 import { siteUrl } from './paths'
-import type { BaseStyle, Layer, Manifest } from './types'
+import type { BaseStyle, HistoricalMap, Layer, Manifest } from './types'
 
 export const BASE_STYLES: BaseStyle[] = [
   { id: 'bright', label: 'Bright', url: 'https://tiles.openfreemap.org/styles/bright' },
@@ -25,6 +26,22 @@ export const infoMapId = ref<string | null>(null)
 export const orderVersion = ref(0)
 
 export const status = reactive({ loading: true, error: '' as string })
+
+/** map id → why its archive could not be read. Absent means readable, or not yet checked. */
+export const archiveErrors = reactive<Record<string, string>>({})
+const probed = new Set<string>()
+
+/**
+ * Checks one layer's archive, once per session. Only layers that are actually
+ * switched on get checked: probing the whole manifest would put a request per
+ * archive on every page load to answer a question nobody asked.
+ */
+export async function checkArchive(map: HistoricalMap) {
+  if (probed.has(map.id)) return
+  probed.add(map.id)
+  const reason = await probeArchive(siteUrl(`maps/${map.file}`))
+  if (reason) archiveErrors[map.id] = reason
+}
 
 export const layerAt = (id: string) => layers.value.find((l) => l.map.id === id)
 

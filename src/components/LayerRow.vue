@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { zoom } from '../store'
+import { archiveErrors, zoom } from '../store'
 import type { Layer } from '../types'
 
 const props = defineProps<{
@@ -25,6 +25,9 @@ const position = computed(() => `${props.index + 1} of ${props.total}`)
 
 /** Switched on but drawing nothing, because the archive has no tiles this far out. */
 const tooFarOut = computed(() => props.layer.visible && zoom.value < props.layer.map.minzoom)
+
+/** Set when the archive itself could not be read — nothing this layer does will help. */
+const unavailable = computed(() => archiveErrors[props.layer.map.id])
 </script>
 
 <template>
@@ -107,7 +110,9 @@ const tooFarOut = computed(() => props.layer.visible && zoom.value < props.layer
       </div>
     </div>
 
-    <p v-if="tooFarOut" class="zoom-hint">
+    <p v-if="unavailable" class="load-error">This map could not be loaded — {{ unavailable }}</p>
+
+    <p v-else-if="tooFarOut" class="zoom-hint">
       Not drawn at this zoom.
       <button class="text-button" type="button" @click="emit('zoom')">Zoom to it</button>
     </p>
@@ -222,5 +227,12 @@ const tooFarOut = computed(() => props.layer.visible && zoom.value < props.layer
   padding-left: 2px;
   font-size: 11px;
   color: var(--text-dim);
+}
+
+.load-error {
+  padding-left: 2px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--danger);
 }
 </style>

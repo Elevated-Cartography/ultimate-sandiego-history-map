@@ -4,13 +4,22 @@ import maplibregl from 'maplibre-gl'
 import { TerraDraw, TerraDrawPolygonMode, TerraDrawSelectMode } from 'terra-draw'
 import { TerraDrawMapLibreGLAdapter } from 'terra-draw-maplibre-gl-adapter'
 import AnnotationForm from './AnnotationForm.vue'
+import { createAngleSnap, createEditAngleSnap } from './angleSnap'
 import { fetchAnnotations, saveAnnotations } from './api'
+import { probeArchive } from '../archives'
 import { BASE_STYLES, DEFAULT_VIEW } from '../store'
 import { siteUrl } from '../paths'
 import type { AnnotationFeature, AnnotationProperties, HistoricalMap, Manifest } from '../types'
 
 const OUTLINE = '#ff7a00'
 const OUTLINE_SELECTED = '#ffd24a'
+
+/**
+ * Decimal places kept on stored coordinates — Terra Draw's own default, repeated
+ * here because the adapter and the angle snapping both have to agree on it.
+ * Roughly a tenth of a millimetre on the ground; far past what a scan can support.
+ */
+const COORDINATE_PRECISION = 9
 
 const RASTER_SOURCE = 'editor-raster-src'
 const RASTER_LAYER = 'editor-raster'
@@ -37,9 +46,22 @@ const selectedId = ref<string | null>(null)
 let styleLoaded = false
 
 const drawMode = ref<'select' | 'polygon'>('select')
+/**
+ * Whether Shift is down, which pins the next corner to 45° steps.
+ *
+ * Read from the window rather than from Terra Draw's own key events: those only
+ * arrive while the map canvas holds focus, so a Shift pressed after clicking in
+ * the sidebar would go unnoticed.
+ */
+const shiftHeld = ref(false)
 const dirty = ref(false)
 const saving = ref(false)
 const loading = ref(true)
+/**
+ * True while the chosen scan still has tiles in flight. Without it a slow
+ * archive and a broken one look identical: an empty map and no explanation.
+ */
+const tilesLoading = ref(false)
 const notice = ref('')
 const error = ref('')
 
@@ -162,6 +184,13 @@ function showOverlay(target: HistoricalMap | undefined) {
     paint: { 'raster-opacity': overlayOpacity.value },
   })
   raiseDrawLayers()
+  syncTileState()
+}
+
+/** MapLibre counts a source as loaded once every tile the current view needs has arrived. */
+function syncTileState() {
+  const m = map.value
+  tilesLoading.value = Boolean(m?.getSource(RASTER_SOURCE)) && !m!.isSourceLoaded(RASTER_SOURCE)
 }
 
 /** Swaps in another map's raster and annotations. Guards unsaved work first. */
@@ -187,6 +216,12 @@ async function openMap(id: string) {
   if (camera) map.value?.jumpTo({ ...camera, zoom: Math.max(camera.zoom ?? target.minzoom, target.minzoom) })
   window.location.hash = `map=${id}`
 
+  // A raster that never arrives is indistinguishable from one still loading, so
+  // ask the archive directly whether it is there at all.
+  void probeArchive(siteUrl(`maps/${target.file}`)).then((reason) => {
+    if (reason && mapId.value === id) error.value = `Could not load ${target.file} — ${reason}`
+  })
+
   try {
     const features = await fetchAnnotations(id)
     for (const feature of features) {
@@ -202,8 +237,13 @@ async function openMap(id: string) {
       draw.value?.addFeatures(
         features.map((f) => ({ type: 'Feature', id: f.id, geometry: f.geometry, properties: { mode: 'polygon' } })),
       ) ?? []
+    // Terra Draw validates what it is handed; a bare count of failures leaves you
+    // with no way to tell a mangled file from a bug in here.
     const rejected = results.filter((r) => !r.valid)
-    if (rejected.length) error.value = `${rejected.length} saved area(s) could not be loaded`
+    if (rejected.length) {
+      const reasons = [...new Set(rejected.map((r) => r.reason ?? 'no reason given'))].join('; ')
+      error.value = `${rejected.length} saved area(s) could not be loaded — ${reasons}`
+    }
 
     refreshList()
     dirty.value = false
@@ -224,7 +264,11 @@ function requestMap(id: string) {
 
 function initDraw(m: maplibregl.Map) {
   const instance = new TerraDraw({
-    adapter: new TerraDrawMapLibreGLAdapter({ map: m, prefixId: DRAW_PREFIX.slice(0, -1) }),
+    adapter: new TerraDrawMapLibreGLAdapter({
+      map: m,
+      prefixId: DRAW_PREFIX.slice(0, -1),
+      coordinatePrecision: COORDINATE_PRECISION,
+    }),
     // Timestamps would have to round-trip through the .geojson files for no gain.
     tracked: false,
     idStrategy: {
@@ -233,11 +277,16 @@ function initDraw(m: maplibregl.Map) {
     },
     modes: [
       new TerraDrawPolygonMode({
+        snapping: { toCustom: createAngleSnap(() => shiftHeld.value, COORDINATE_PRECISION) },
         styles: {
           fillColor: OUTLINE,
           fillOpacity: 0.16,
           outlineColor: OUTLINE,
           outlineWidth: 2,
+          // Marks where a snapped corner will land, which is not under the cursor.
+          snappingPointColor: OUTLINE_SELECTED,
+          snappingPointWidth: 5,
+          snappingPointOutlineWidth: 1,
         },
       }),
       new TerraDrawSelectMode({
@@ -248,7 +297,15 @@ function initDraw(m: maplibregl.Map) {
           polygon: {
             feature: {
               draggable: true,
-              coordinates: { midpoints: true, draggable: true, deletable: true },
+              coordinates: {
+                midpoints: true,
+                draggable: true,
+                deletable: true,
+                // Same Shift as while drawing, applied to a corner being dragged
+                // on a finished area — including a midpoint dragged out into a
+                // new one, which Terra Draw inserts and then drags like any other.
+                snappable: { toCustom: createEditAngleSnap(() => shiftHeld.value, COORDINATE_PRECISION) },
+              },
             },
           },
         },
@@ -286,11 +343,16 @@ function initDraw(m: maplibregl.Map) {
 }
 
 function onKeydown(event: KeyboardEvent) {
+  shiftHeld.value = event.shiftKey
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 's') {
     event.preventDefault()
     void save()
   }
 }
+
+const onKeyup = (event: KeyboardEvent) => (shiftHeld.value = event.shiftKey)
+/** A Shift released while another window has focus never reaches us; don't stay stuck on. */
+const onWindowBlur = () => (shiftHeld.value = false)
 
 const onBeforeUnload = (event: BeforeUnloadEvent) => {
   if (dirty.value) event.preventDefault()
@@ -298,6 +360,8 @@ const onBeforeUnload = (event: BeforeUnloadEvent) => {
 
 onMounted(async () => {
   window.addEventListener('keydown', onKeydown)
+  window.addEventListener('keyup', onKeyup)
+  window.addEventListener('blur', onWindowBlur)
   window.addEventListener('beforeunload', onBeforeUnload)
 
   const m = new maplibregl.Map({
@@ -316,8 +380,19 @@ onMounted(async () => {
     // up is fatal, though, and would otherwise leave the editor silently blank.
     if (!styleLoaded) error.value = `Base map failed to load — ${event.error?.message ?? 'unknown error'}`
   })
+  m.on('sourcedata', (event) => {
+    if (event.sourceId === RASTER_SOURCE) syncTileState()
+  })
+  m.on('idle', syncTileState)
   m.addControl(new maplibregl.NavigationControl(), 'bottom-right')
   m.addControl(new maplibregl.ScaleControl({ maxWidth: 100, unit: 'imperial' }), 'bottom-left')
+
+  // Subscribed before anything is awaited. style.load fires once and is not
+  // replayed to late subscribers, so waiting for it only after the manifest
+  // fetch is a race: with the base style already in the browser cache — a
+  // reload, or a hot update remounting this component — it fires first and the
+  // editor waits forever, showing a bare base map and a permanent "Loading…".
+  const styleReady = new Promise<void>((ready) => m.once('style.load', () => ready()))
 
   try {
     const res = await fetch(siteUrl('maps/manifest.json'))
@@ -327,7 +402,7 @@ onMounted(async () => {
     error.value = err instanceof Error ? err.message : String(err)
   }
 
-  await new Promise<void>((ready) => m.once('style.load', () => ready()))
+  await styleReady
   styleLoaded = true
   initDraw(m)
 
@@ -339,6 +414,8 @@ onMounted(async () => {
 
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', onKeydown)
+  window.removeEventListener('keyup', onKeyup)
+  window.removeEventListener('blur', onWindowBlur)
   window.removeEventListener('beforeunload', onBeforeUnload)
   draw.value?.stop()
   map.value?.remove()
@@ -378,11 +455,18 @@ watch(overlayOpacity, (value) => {
         </button>
       </div>
 
+      <!-- Only when a corner is actually there to snap: drawing one, or dragging
+           one on the selected area. -->
+      <span v-if="drawMode === 'polygon' || selectedId" class="hint" :class="{ live: shiftHeld }">
+        Hold <kbd>Shift</kbd> for 45° edges
+      </span>
+
       <div class="spacer" />
 
       <span v-if="error" class="status error">{{ error }}</span>
       <span v-else-if="notice" class="status ok">{{ notice }}</span>
       <span v-else-if="loading" class="status">Loading…</span>
+      <span v-else-if="tilesLoading" class="status">Loading map tiles…</span>
       <span v-else-if="dirty" class="status">Unsaved changes</span>
 
       <button class="button primary" type="button" :disabled="!dirty || saving" @click="save">
@@ -509,6 +593,33 @@ watch(overlayOpacity, (value) => {
 .tool.active {
   color: var(--accent-text);
   background: var(--accent);
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  font-size: 11.5px;
+  color: var(--text-dim);
+}
+.hint.live {
+  color: var(--accent);
+}
+.hint kbd {
+  font: inherit;
+  font-size: 10.5px;
+  font-weight: 600;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+.hint.live kbd {
+  color: var(--accent-text);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .status {

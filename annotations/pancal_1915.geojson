@@ -1,0 +1,496 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "8bdde543-39b0-4c7f-9881-c544aaa7eafd",
+      "properties": {
+        "id": "8bdde543-39b0-4c7f-9881-c544aaa7eafd",
+        "title": "Painted Desert of the Santa Fe",
+        "body": "Also called the \"Indian Village\", this facsimile of the Indian villages of the American Southwest was full of Native Americans doing traditional stuff. ",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/352fb81a6f8e1e24.avif"
+          },
+          {
+            "src": "annotations/images/pancal_1915/a9ed02ee04d97a81.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.148671069,
+              32.738165918
+            ],
+            [
+              -117.147029023,
+              32.738191639
+            ],
+            [
+              -117.147044312,
+              32.738595455
+            ],
+            [
+              -117.147093237,
+              32.738891242
+            ],
+            [
+              -117.147249186,
+              32.739210177
+            ],
+            [
+              -117.147564141,
+              32.739608845
+            ],
+            [
+              -117.148597682,
+              32.739197317
+            ],
+            [
+              -117.14858545,
+              32.73871377
+            ],
+            [
+              -117.148671069,
+              32.738165918
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fe53b0e8-84e5-46da-993c-8a1743244adc",
+      "properties": {
+        "id": "fe53b0e8-84e5-46da-993c-8a1743244adc",
+        "title": "Bontanical Building",
+        "body": "One of the most striking buildings from the 1915 exposition, this garden-filled structure exists in much the same state today. ",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/c570f87126e7ca2b.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.149630729,
+              32.732529582
+            ],
+            [
+              -117.14962806,
+              32.732362719
+            ],
+            [
+              -117.149400072,
+              32.732362719
+            ],
+            [
+              -117.149400072,
+              32.732304056
+            ],
+            [
+              -117.149098092,
+              32.732304056
+            ],
+            [
+              -117.149098092,
+              32.732360902
+            ],
+            [
+              -117.148869372,
+              32.732360902
+            ],
+            [
+              -117.148869372,
+              32.732529582
+            ],
+            [
+              -117.149630729,
+              32.732529582
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "5087d91b-55f3-40f9-91ce-a028701553e4",
+      "properties": {
+        "id": "5087d91b-55f3-40f9-91ce-a028701553e4",
+        "title": "Lipton Tea Garden",
+        "body": "A plot of tea plants overseen by the Lipton Tea company using plants from their plantations in Sri Lanka. The official guidebook expresses the hope that this plot might lead to a new tea industry in the area, but this was not to be.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/78823b87bfbc0814.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.149039404,
+              32.735305269
+            ],
+            [
+              -117.148958354,
+              32.735040581
+            ],
+            [
+              -117.148853467,
+              32.734815998
+            ],
+            [
+              -117.148605551,
+              32.734888185
+            ],
+            [
+              -117.148772418,
+              32.735361414
+            ],
+            [
+              -117.149039404,
+              32.735305269
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c9a342de-771e-4e57-bc41-f6b410f2626d",
+      "properties": {
+        "id": "c9a342de-771e-4e57-bc41-f6b410f2626d",
+        "title": "Nevada Building",
+        "body": "There were a number of buildings promoting the goods and industries of western states, this building housed such exhibits for Nevada. ",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/e54643da9f9b47b2.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.149010798,
+              32.735758443
+            ],
+            [
+              -117.148996495,
+              32.735457664
+            ],
+            [
+              -117.148758115,
+              32.735457664
+            ],
+            [
+              -117.14878672,
+              32.735766464
+            ],
+            [
+              -117.149010798,
+              32.735758443
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "f324446a-0a9d-4ca2-8ace-fa2c0868da15",
+      "properties": {
+        "id": "f324446a-0a9d-4ca2-8ace-fa2c0868da15",
+        "title": "Utah Building",
+        "body": "As with the other state related buildings, this building held exhibits promoting goods and services from Utah.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/5425b11fbd96b77c.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.151966269,
+              32.729018871
+            ],
+            [
+              -117.151985045,
+              32.728925232
+            ],
+            [
+              -117.151887144,
+              32.728902668
+            ],
+            [
+              -117.151913966,
+              32.728825951
+            ],
+            [
+              -117.151805337,
+              32.728806772
+            ],
+            [
+              -117.151778515,
+              32.728890258
+            ],
+            [
+              -117.151690002,
+              32.728873335
+            ],
+            [
+              -117.151671226,
+              32.728969231
+            ],
+            [
+              -117.151763763,
+              32.728981641
+            ],
+            [
+              -117.151742305,
+              32.729067383
+            ],
+            [
+              -117.151844229,
+              32.729085434
+            ],
+            [
+              -117.151868369,
+              32.72900082
+            ],
+            [
+              -117.151966269,
+              32.729018871
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "f8d1645f-765f-4ff9-b44a-743b6d0683d6",
+      "properties": {
+        "id": "f8d1645f-765f-4ff9-b44a-743b6d0683d6",
+        "title": "Kansas Building",
+        "body": "Exhibits about goods and services from the state of Kansas.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/b71c9ef04f833bcb.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.151787348,
+              32.729522438
+            ],
+            [
+              -117.15182844,
+              32.729492438
+            ],
+            [
+              -117.151766736,
+              32.729444988
+            ],
+            [
+              -117.151827198,
+              32.729398748
+            ],
+            [
+              -117.151752994,
+              32.729347885
+            ],
+            [
+              -117.15169528,
+              32.729352509
+            ],
+            [
+              -117.151612831,
+              32.729409152
+            ],
+            [
+              -117.151608709,
+              32.729458859
+            ],
+            [
+              -117.151680165,
+              32.72951897
+            ],
+            [
+              -117.151737879,
+              32.729480823
+            ],
+            [
+              -117.151787348,
+              32.729522438
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "d86547b3-3700-4144-b024-f06d98059ba2",
+      "properties": {
+        "id": "d86547b3-3700-4144-b024-f06d98059ba2",
+        "title": "Home Economy Building",
+        "body": "This building contained exhibits \"devoted principally to showing to women what has been done to better conditions in the home\" (according to the official guide) and included a model kitchen to demonstrate new technologies. This building was demolished in 1963 and the Timken museum stands on the site today.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/8b3fbe9a08bb1a17.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.149431066,
+              32.731890452
+            ],
+            [
+              -117.149596022,
+              32.731883683
+            ],
+            [
+              -117.14981194,
+              32.731881427
+            ],
+            [
+              -117.14981194,
+              32.731918656
+            ],
+            [
+              -117.149928616,
+              32.731916399
+            ],
+            [
+              -117.149933981,
+              32.731944603
+            ],
+            [
+              -117.149998354,
+              32.731944603
+            ],
+            [
+              -117.149998354,
+              32.731894964
+            ],
+            [
+              -117.150060044,
+              32.731894964
+            ],
+            [
+              -117.150060044,
+              32.731762971
+            ],
+            [
+              -117.149987625,
+              32.731762971
+            ],
+            [
+              -117.149987625,
+              32.731589235
+            ],
+            [
+              -117.149742203,
+              32.731589235
+            ],
+            [
+              -117.149742203,
+              32.731544109
+            ],
+            [
+              -117.149484711,
+              32.731544109
+            ],
+            [
+              -117.149484711,
+              32.731594876
+            ],
+            [
+              -117.149431066,
+              32.731594876
+            ],
+            [
+              -117.149431066,
+              32.731890452
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cb0e938d-c1e6-4a14-ab82-dc27f1ac787e",
+      "properties": {
+        "id": "cb0e938d-c1e6-4a14-ab82-dc27f1ac787e",
+        "title": "Foreign and Domestic Arts Building",
+        "body": "The largest exhibit in this building was from Japan, showcasing arts and industrial products from there. There were also numerous displays from other countries as well. This building was intended to be temporary, but was not demolished until the 1990s, after which a new building was built on the site with the design of the original as a guide.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/4b2981bc0af43665.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.149987292,
+              32.731267698
+            ],
+            [
+              -117.149980736,
+              32.730945681
+            ],
+            [
+              -117.149841932,
+              32.730945681
+            ],
+            [
+              -117.149841932,
+              32.73062077
+            ],
+            [
+              -117.149528114,
+              32.73062077
+            ],
+            [
+              -117.149528114,
+              32.730942297
+            ],
+            [
+              -117.149313858,
+              32.730942297
+            ],
+            [
+              -117.149313858,
+              32.731267698
+            ],
+            [
+              -117.149987292,
+              32.731267698
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
