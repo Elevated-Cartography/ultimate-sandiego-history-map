@@ -10,9 +10,18 @@ export const annotationsByMap = ref<Record<string, AnnotationFeature[]>>({})
 
 export const selected = ref<{ mapId: string; featureId: string } | null>(null)
 
+/**
+ * Master switch for the annotation overlays. Off pulls them from every layer at
+ * once, for reading the scans themselves without outlines drawn over them.
+ */
+export const annotationsVisible = ref(true)
+
 const inFlight = new Set<string>()
 
 export const hasAnnotations = (mapId: string) => annotatedMapIds.value.has(mapId)
+
+/** Whether anything is annotated at all — the toggle is noise on a site with none. */
+export const hasAnyAnnotations = computed(() => annotatedMapIds.value.size > 0)
 
 export const selectedFeature = computed<AnnotationFeature | undefined>(() => {
   const sel = selected.value

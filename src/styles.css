@@ -158,53 +158,6 @@ input[type='range'] {
   border-color: var(--accent);
 }
 
-/* A compact toggle switch, so "this layer is on" reads at a glance. */
-.switch {
-  position: relative;
-  flex: none;
-  display: inline-flex;
-  cursor: pointer;
-}
-/* The real checkbox stays keyboard- and pointer-reachable; the track/thumb below
-   are what actually get painted. */
-.switch input {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-.switch .track {
-  display: block;
-  width: 30px;
-  height: 17px;
-  border-radius: 999px;
-  background: var(--line);
-  transition: background 0.15s;
-}
-.switch .thumb {
-  display: block;
-  width: 13px;
-  height: 13px;
-  margin: 2px;
-  border-radius: 50%;
-  background: var(--surface);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  transition: transform 0.15s;
-}
-.switch input:checked + .track {
-  background: var(--accent);
-}
-.switch input:checked + .track .thumb {
-  transform: translateX(13px);
-}
-.switch input:focus-visible + .track {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
 /* ------------------------------------------------------- maplibre chrome -- */
 
 .maplibregl-ctrl-group {

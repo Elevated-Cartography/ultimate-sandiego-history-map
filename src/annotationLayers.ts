@@ -4,6 +4,7 @@ import type maplibregl from 'maplibre-gl'
 import type { ExpressionSpecification } from 'maplibre-gl'
 import {
   annotationsByMap,
+  annotationsVisible,
   clearSelection,
   hasAnnotations,
   loadAnnotations,
@@ -50,8 +51,13 @@ const whenSelected = (featureId: string, yes: string | number, no: string | numb
 export function useAnnotationLayers(map: ShallowRef<maplibregl.Map | undefined>, styleReady: Ref<boolean>) {
   /** The map, but only once it is safe to add sources and layers to it. */
   const ready = () => (styleReady.value ? map.value : undefined)
-  /** Visible layers whose map is known to have annotations, topmost first. */
-  const activeMapIds = () => layers.value.filter((l) => l.visible && hasAnnotations(l.map.id)).map((l) => l.map.id)
+  /**
+   * Visible layers whose map is known to have annotations, topmost first. Empty
+   * while annotations are switched off, which is what makes the master switch
+   * work: everything downstream already treats "not active" as "not on the map".
+   */
+  const activeMapIds = () =>
+    annotationsVisible.value ? layers.value.filter((l) => l.visible && hasAnnotations(l.map.id)).map((l) => l.map.id) : []
 
   const liveFillLayers = (m: maplibregl.Map) =>
     activeMapIds()

@@ -12,6 +12,7 @@ import {
   status,
   toggle,
 } from '../store'
+import { annotationsVisible, hasAnyAnnotations } from '../annotations'
 import type { HistoricalMap } from '../types'
 
 const emit = defineEmits<{ zoom: [map: HistoricalMap] }>()
@@ -74,6 +75,11 @@ function hideAll() {
         <select v-model="baseStyleId">
           <option v-for="style in BASE_STYLES" :key="style.id" :value="style.id">{{ style.label }}</option>
         </select>
+      </label>
+
+      <label v-if="hasAnyAnnotations" class="field">
+        <span>Annotations</span>
+        <input type="checkbox" v-model="annotationsVisible" />
       </label>
     </div>
 
