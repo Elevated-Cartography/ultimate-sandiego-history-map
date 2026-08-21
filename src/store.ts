@@ -11,8 +11,6 @@ export const BASE_STYLES: BaseStyle[] = [
 /** Where the map opens if the URL hash doesn't say otherwise: downtown San Diego. */
 export const DEFAULT_VIEW = { center: [-117.1611, 32.7157] as [number, number], zoom: 12.2 }
 
-/** Shown on first visit so the map isn't bare — small archive, good downtown coverage. */
-const DEFAULT_VISIBLE = 'lowell_1935'
 const DEFAULT_OPACITY = 1
 
 export const layers = ref<Layer[]>([])
@@ -76,11 +74,9 @@ export async function loadManifest() {
 
     // Newest first, so the drawer reads top-down as "most recent on top of the stack".
     const maps = manifest.maps.slice().sort((a, b) => b.year - a.year)
-    layers.value = maps.map((map) => ({
-      map,
-      visible: map.id === DEFAULT_VISIBLE,
-      opacity: DEFAULT_OPACITY,
-    }))
+    // Nothing is shown on a bare URL: the visitor picks a layer from the drawer.
+    // Defaulting one on made every first visit fetch tiles nobody had asked for.
+    layers.value = maps.map((map) => ({ map, visible: false, opacity: DEFAULT_OPACITY }))
     applyHashLayers()
   } catch (err) {
     status.error = err instanceof Error ? err.message : String(err)
