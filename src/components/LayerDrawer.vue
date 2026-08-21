@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import LayerRow from './LayerRow.vue'
 import {
   BASE_STYLES,
+  aboutOpen,
   baseStyleId,
   drawerOpen,
   infoMapId,
@@ -61,6 +62,15 @@ function hideAll() {
         <h1>San Diego History Map</h1>
         <p>{{ visibleCount }} of {{ layers.length }} historical layers shown</p>
       </div>
+      <button class="icon" type="button" title="About this project" @click="aboutOpen = true">
+        <span class="sr-only">About this project</span>
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+          <circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+          <circle cx="10" cy="5.9" r="1.15" fill="currentColor" />
+          <path d="M10 9v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </button>
+
       <button class="icon close" type="button" title="Close panel" @click="drawerOpen = false">
         <span class="sr-only">Close panel</span>
         <svg viewBox="0 0 14 14" width="14" height="14" aria-hidden="true">
@@ -121,6 +131,9 @@ function hideAll() {
       <a href="https://www.davidrumsey.com/" target="_blank" rel="noopener">David Rumsey Map Collection</a>
       and other archives. Base map by
       <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>.
+      <!-- Repeated from the header icon: the footer is where people look for who
+           made a thing and how to complain about it. -->
+      <button class="text-button" type="button" @click="aboutOpen = true">About &amp; feedback</button>
     </footer>
   </aside>
 </template>
@@ -222,6 +235,11 @@ h1 {
   font-size: 10.5px;
   line-height: 1.5;
   color: var(--text-dim);
+}
+/* Its own line: trailing a sentence of attribution, it reads as another credit. */
+.drawer-foot .text-button {
+  display: block;
+  margin-top: 5px;
 }
 
 @media (max-width: 820px) {

@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import MapCanvas from './components/MapCanvas.vue'
 import LayerDrawer from './components/LayerDrawer.vue'
 import MapInfoDialog from './components/MapInfoDialog.vue'
+import AboutDialog from './components/AboutDialog.vue'
 import AnnotationSidebar from './components/AnnotationSidebar.vue'
 import { drawerOpen, loadManifest } from './store'
 import { loadAnnotationIndex } from './annotations'
@@ -31,6 +32,7 @@ onMounted(() => Promise.all([loadManifest(), loadAnnotationIndex()]))
     <LayerDrawer @zoom="zoomTo" />
     <AnnotationSidebar />
     <MapInfoDialog @zoom="zoomTo" />
+    <AboutDialog />
   </main>
 </template>
 

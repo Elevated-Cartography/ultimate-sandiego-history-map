@@ -19,6 +19,7 @@ export const zoom = ref(DEFAULT_VIEW.zoom)
 export const baseStyleId = ref(BASE_STYLES[0].id)
 export const drawerOpen = ref(window.innerWidth > 820)
 export const infoMapId = ref<string | null>(null)
+export const aboutOpen = ref(false)
 
 /** Bumped whenever the stacking order changes, so the map can resync in one pass. */
 export const orderVersion = ref(0)
