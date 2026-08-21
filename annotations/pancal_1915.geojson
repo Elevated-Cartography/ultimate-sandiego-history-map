@@ -444,7 +444,7 @@
         "body": "The largest exhibit in this building was from Japan, showcasing arts and industrial products from there. There were also numerous displays from other countries as well. This building was intended to be temporary, but was not demolished until the 1990s, after which a new building was built on the site with the design of the original as a guide.",
         "images": [
           {
-            "src": "annotations/images/pancal_1915/4b2981bc0af43665.avif"
+            "src": "annotations/images/pancal_1915/4769c6b35d6dc87f.avif"
           }
         ]
       },
@@ -487,6 +487,1125 @@
             [
               -117.149987292,
               32.731267698
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "945bfd19-a570-4095-a0e0-62cd812cd7cc",
+      "properties": {
+        "id": "945bfd19-a570-4095-a0e0-62cd812cd7cc",
+        "title": "Cabrillo Bridge",
+        "body": "The bridge was constructed to provide easy access to the main mesa from the west and was designed to resemble similar bridges in Mexico and Spain. The lagoon underneath the bridge was man-made, created specifically for the exposition.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/01b372c984fc6b8a.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.156314081,
+              32.731542535
+            ],
+            [
+              -117.156314081,
+              32.731322163
+            ],
+            [
+              -117.153184616,
+              32.731322163
+            ],
+            [
+              -117.153184616,
+              32.731542535
+            ],
+            [
+              -117.156314081,
+              32.731542535
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cb80419a-461e-4a08-8c9a-a23d5cf165bf",
+      "properties": {
+        "id": "cb80419a-461e-4a08-8c9a-a23d5cf165bf",
+        "title": "The California Building",
+        "body": "Unlike the other state buildings, the California Building did not house exhibits for the state's various industries (that job being left to the individual county buildings) but instead acted as a gathering place and headquarters for those running the exposition. Additionally, it had some exhibits of Mexico and Central American Native peoples, as they were deemed \"another Egypt\". The building was intended to be permanent and today houses the Museum of Us.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/bedad163717976b5.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.152719509,
+              32.731472681
+            ],
+            [
+              -117.152578819,
+              32.731473809
+            ],
+            [
+              -117.152578819,
+              32.731599034
+            ],
+            [
+              -117.152468849,
+              32.731599034
+            ],
+            [
+              -117.152468849,
+              32.731553908
+            ],
+            [
+              -117.152277071,
+              32.731553908
+            ],
+            [
+              -117.152277071,
+              32.731599034
+            ],
+            [
+              -117.152165759,
+              32.731599034
+            ],
+            [
+              -117.152165759,
+              32.731473809
+            ],
+            [
+              -117.152094267,
+              32.731473809
+            ],
+            [
+              -117.152094267,
+              32.731535172
+            ],
+            [
+              -117.151958076,
+              32.731535172
+            ],
+            [
+              -117.151958076,
+              32.731675775
+            ],
+            [
+              -117.152214982,
+              32.731675775
+            ],
+            [
+              -117.152214982,
+              32.731910114
+            ],
+            [
+              -117.152564746,
+              32.731910114
+            ],
+            [
+              -117.152564746,
+              32.731667964
+            ],
+            [
+              -117.152719509,
+              32.731667964
+            ],
+            [
+              -117.152719509,
+              32.731472681
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ed7695ee-d68d-4f10-92f0-5391a849d121",
+      "properties": {
+        "id": "ed7695ee-d68d-4f10-92f0-5391a849d121",
+        "title": "Fine Arts Building",
+        "body": "The Fine Arts building contained a gallery of paintings for display and sale. Along with a view of the exterior are a few of the paintings displayed at the time.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/6f3fb33eb7b6a891.avif"
+          },
+          {
+            "src": "annotations/images/pancal_1915/6e210a8f0eebd54b.avif",
+            "caption": "Men of the Dock - George Bellows"
+          },
+          {
+            "src": "annotations/images/pancal_1915/524f14d977195b22.avif",
+            "caption": "The Wrestlers - George Luks"
+          },
+          {
+            "src": "annotations/images/pancal_1915/0f8603612e3ffcd0.avif",
+            "caption": "Sunday, Girls Drying Their Hair - John Sloan"
+          },
+          {
+            "src": "annotations/images/pancal_1915/50955539ef7c8e74.avif",
+            "caption": "Little Girl in White - George Bellows"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.152714271,
+              32.731385813
+            ],
+            [
+              -117.152711588,
+              32.731328277
+            ],
+            [
+              -117.152828265,
+              32.731328277
+            ],
+            [
+              -117.152828265,
+              32.731236896
+            ],
+            [
+              -117.15268879,
+              32.731236896
+            ],
+            [
+              -117.152682084,
+              32.731177104
+            ],
+            [
+              -117.152648557,
+              32.731169207
+            ],
+            [
+              -117.152648557,
+              32.730992085
+            ],
+            [
+              -117.152534563,
+              32.730992085
+            ],
+            [
+              -117.152534563,
+              32.731103773
+            ],
+            [
+              -117.152180511,
+              32.731103773
+            ],
+            [
+              -117.152180511,
+              32.731055262
+            ],
+            [
+              -117.152085293,
+              32.731055262
+            ],
+            [
+              -117.152085293,
+              32.731147772
+            ],
+            [
+              -117.151961911,
+              32.731147772
+            ],
+            [
+              -117.151961911,
+              32.731311355
+            ],
+            [
+              -117.152101386,
+              32.731311355
+            ],
+            [
+              -117.152101386,
+              32.731380172
+            ],
+            [
+              -117.152165759,
+              32.731380172
+            ],
+            [
+              -117.152165759,
+              32.731261716
+            ],
+            [
+              -117.152584184,
+              32.731261716
+            ],
+            [
+              -117.152584184,
+              32.731385813
+            ],
+            [
+              -117.152714271,
+              32.731385813
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0d693dd8-d1cd-47ad-8745-5d4a0726c6a6",
+      "properties": {
+        "id": "0d693dd8-d1cd-47ad-8745-5d4a0726c6a6",
+        "title": "Science of Man Building",
+        "body": "This building contained anthropology exhibits on loan from the Smithsonian, \"showing the steady advance of man from the earliest days as proved to the satisfaction of scientists by data which have been unearthed from time to time\". It was demolished in 1964, but it's exhibits inspired the nearby Museum of Us.\n",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/524f73cf339b0c05.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.150845186,
+              32.731902854
+            ],
+            [
+              -117.15090376,
+              32.731896774
+            ],
+            [
+              -117.150909125,
+              32.731937446
+            ],
+            [
+              -117.151222766,
+              32.731937446
+            ],
+            [
+              -117.151222766,
+              32.731811655
+            ],
+            [
+              -117.151592869,
+              32.731811655
+            ],
+            [
+              -117.151592869,
+              32.731679573
+            ],
+            [
+              -117.151226505,
+              32.731679573
+            ],
+            [
+              -117.151226505,
+              32.731528623
+            ],
+            [
+              -117.15102463,
+              32.731528623
+            ],
+            [
+              -117.15102463,
+              32.731698442
+            ],
+            [
+              -117.150845186,
+              32.731698442
+            ],
+            [
+              -117.150845186,
+              32.731902854
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cc04138e-972c-400e-94e9-33ab5d5027cb",
+      "properties": {
+        "id": "cc04138e-972c-400e-94e9-33ab5d5027cb",
+        "title": "Sacramento Counties Building",
+        "body": "This building contained exhibits about agricultural, mining and other resources from the counties surrounding the Sacramento Valley, namely Eldorado, Placer, Plumas, Yuba Tehama bnasta, Glenn, Colusa, Solano and Sacramento counties. It was demolished and replaced by the San Diego Museum of Art in 1926.\n",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/04205516544e3b96.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.150913807,
+              32.732159316
+            ],
+            [
+              -117.150906458,
+              32.732067376
+            ],
+            [
+              -117.150673106,
+              32.732067376
+            ],
+            [
+              -117.150673106,
+              32.731944407
+            ],
+            [
+              -117.150602028,
+              32.731944407
+            ],
+            [
+              -117.150598004,
+              32.731917332
+            ],
+            [
+              -117.150321737,
+              32.731916204
+            ],
+            [
+              -117.150320396,
+              32.731944407
+            ],
+            [
+              -117.150221154,
+              32.731944407
+            ],
+            [
+              -117.150221154,
+              32.732073016
+            ],
+            [
+              -117.149984449,
+              32.732073016
+            ],
+            [
+              -117.149984449,
+              32.732166653
+            ],
+            [
+              -117.150142699,
+              32.732166653
+            ],
+            [
+              -117.150142699,
+              32.732214035
+            ],
+            [
+              -117.150770669,
+              32.732214035
+            ],
+            [
+              -117.150770669,
+              32.732159316
+            ],
+            [
+              -117.150913807,
+              32.732159316
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "d2826022-ae39-4a51-b3b8-f37cc4280c57",
+      "properties": {
+        "id": "d2826022-ae39-4a51-b3b8-f37cc4280c57",
+        "title": "Organ Pavillion",
+        "body": "Constructed for the Exposition, this was and still is the world's largest outdoor organ. It played daily recitals during the exposition.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/a3eff79035bb8377.avif"
+          },
+          {
+            "src": "annotations/images/pancal_1915/cc43a09146a0a1f5.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.150298467,
+              32.72936453
+            ],
+            [
+              -117.150019414,
+              32.729436259
+            ],
+            [
+              -117.14992252,
+              32.729599279
+            ],
+            [
+              -117.14992252,
+              32.7299351
+            ],
+            [
+              -117.150930214,
+              32.7299351
+            ],
+            [
+              -117.150930214,
+              32.729661227
+            ],
+            [
+              -117.150856574,
+              32.729514509
+            ],
+            [
+              -117.150713172,
+              32.729390614
+            ],
+            [
+              -117.150527136,
+              32.729367791
+            ],
+            [
+              -117.150298467,
+              32.72936453
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dec42049-a575-4221-ac2d-88f330745fa3",
+      "properties": {
+        "id": "dec42049-a575-4221-ac2d-88f330745fa3",
+        "title": "Indian Arts Building",
+        "body": "This building contained exhibits of Native American artifacts, principally from the southwest. There was also a tea room run by the Daughters of the American Revolution on the second floor. It was torn down and rebuilt by the city in the 1990s and is now the House of Charm.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/7e09cee199c41e16.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.151221418,
+              32.73132198
+            ],
+            [
+              -117.151221418,
+              32.731107296
+            ],
+            [
+              -117.151264821,
+              32.731107296
+            ],
+            [
+              -117.151264821,
+              32.730945188
+            ],
+            [
+              -117.15134989,
+              32.730945188
+            ],
+            [
+              -117.15134989,
+              32.730828352
+            ],
+            [
+              -117.151046072,
+              32.730828352
+            ],
+            [
+              -117.151046072,
+              32.730927662
+            ],
+            [
+              -117.150891559,
+              32.730927662
+            ],
+            [
+              -117.150891559,
+              32.731037195
+            ],
+            [
+              -117.150815171,
+              32.731037195
+            ],
+            [
+              -117.150815171,
+              32.731161333
+            ],
+            [
+              -117.150895031,
+              32.731161333
+            ],
+            [
+              -117.150895031,
+              32.731259182
+            ],
+            [
+              -117.151065169,
+              32.731259182
+            ],
+            [
+              -117.151065169,
+              32.731323441
+            ],
+            [
+              -117.151221418,
+              32.73132198
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "b99af584-0eb5-4f22-8101-074be3fcad76",
+      "properties": {
+        "id": "b99af584-0eb5-4f22-8101-074be3fcad76",
+        "title": "Japanese Tea Pavilion",
+        "body": "Here tea and rice cakes could be bought from women in traditional Japanese costumes.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/18e3314a55bd9891.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.148690639,
+              32.732919388
+            ],
+            [
+              -117.148690639,
+              32.733087459
+            ],
+            [
+              -117.148916602,
+              32.733087459
+            ],
+            [
+              -117.148916602,
+              32.73292339
+            ],
+            [
+              -117.148690639,
+              32.732919388
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "26500d43-d538-483c-92e1-2d997d5b20ee",
+      "properties": {
+        "id": "26500d43-d538-483c-92e1-2d997d5b20ee",
+        "title": "Varied Industries Building",
+        "body": "This building held exhibits for a variety of industries. Some of the exhibits:\n\n* A working bread and cake making plant that supplied much of what was consume on the exposition grounds.\n* A sea-food company showing how it fished\n* A cracker company showing the manufacture of it's crackers\n* A winery showing the way they gathered and pressed grapes.\n\n",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/44aa14dbc0816898.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.149071085,
+              32.731894121
+            ],
+            [
+              -117.149067732,
+              32.731795972
+            ],
+            [
+              -117.149038228,
+              32.731795972
+            ],
+            [
+              -117.149032863,
+              32.731659465
+            ],
+            [
+              -117.149067732,
+              32.731652696
+            ],
+            [
+              -117.149067732,
+              32.73158952
+            ],
+            [
+              -117.148854496,
+              32.73158952
+            ],
+            [
+              -117.148854496,
+              32.731539881
+            ],
+            [
+              -117.148680153,
+              32.731539881
+            ],
+            [
+              -117.148680153,
+              32.731592904
+            ],
+            [
+              -117.148437413,
+              32.731592904
+            ],
+            [
+              -117.148437413,
+              32.731545521
+            ],
+            [
+              -117.148273798,
+              32.731545521
+            ],
+            [
+              -117.148273798,
+              32.731598545
+            ],
+            [
+              -117.148139688,
+              32.731598545
+            ],
+            [
+              -117.148139688,
+              32.731852379
+            ],
+            [
+              -117.148886012,
+              32.731852379
+            ],
+            [
+              -117.148886012,
+              32.731894121
+            ],
+            [
+              -117.149071085,
+              32.731894121
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "547da84a-40d1-4c14-8a4b-62ade12a8851",
+      "properties": {
+        "id": "547da84a-40d1-4c14-8a4b-62ade12a8851",
+        "title": "The Food Palace",
+        "body": "This building housed exhibits of all types of food and drink which visitors could see and taste.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/0244e28e0f7c7925.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.148603336,
+              32.732645113
+            ],
+            [
+              -117.148597502,
+              32.732407102
+            ],
+            [
+              -117.148642714,
+              32.732369069
+            ],
+            [
+              -117.148699594,
+              32.732306499
+            ],
+            [
+              -117.148604794,
+              32.732232888
+            ],
+            [
+              -117.148466241,
+              32.732232888
+            ],
+            [
+              -117.148466241,
+              32.732115108
+            ],
+            [
+              -117.148581459,
+              32.732115108
+            ],
+            [
+              -117.148581459,
+              32.731870962
+            ],
+            [
+              -117.148168715,
+              32.731870962
+            ],
+            [
+              -117.148168715,
+              32.732144553
+            ],
+            [
+              -117.148110377,
+              32.732144553
+            ],
+            [
+              -117.148117669,
+              32.732397287
+            ],
+            [
+              -117.148143921,
+              32.73239606
+            ],
+            [
+              -117.148148297,
+              32.732434093
+            ],
+            [
+              -117.1481833,
+              32.732430413
+            ],
+            [
+              -117.1481833,
+              32.732647567
+            ],
+            [
+              -117.148279558,
+              32.732650021
+            ],
+            [
+              -117.148295601,
+              32.732630391
+            ],
+            [
+              -117.148474991,
+              32.73262671
+            ],
+            [
+              -117.148474991,
+              32.73264634
+            ],
+            [
+              -117.148603336,
+              32.732645113
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3a379c65-1b26-4b37-8680-939f7942b1f8",
+      "properties": {
+        "id": "3a379c65-1b26-4b37-8680-939f7942b1f8",
+        "title": "Commerce and Industries Building",
+        "body": "Some of the exhibits in this building include:\n\n* A display of adding machines, cash registers and related equipment\n* A steamship exhibit\n* An exhibit of \"a large motor-truck company\"\n* The US Mint exhibit, making souvenir coins for the exposition\n* US Navy Exhibit\n\nThe building was destroyed by arson in 1978 and rebuilt as the Casa de Balboa.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/092c06100fef52b1.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.149154519,
+              32.73127486
+            ],
+            [
+              -117.149132391,
+              32.730933591
+            ],
+            [
+              -117.149068018,
+              32.730933591
+            ],
+            [
+              -117.149068018,
+              32.730827544
+            ],
+            [
+              -117.148927202,
+              32.730827544
+            ],
+            [
+              -117.148927202,
+              32.730943745
+            ],
+            [
+              -117.148532917,
+              32.730943745
+            ],
+            [
+              -117.148532917,
+              32.730723753
+            ],
+            [
+              -117.148223122,
+              32.730723753
+            ],
+            [
+              -117.148223122,
+              32.730781289
+            ],
+            [
+              -117.148223122,
+              32.730944873
+            ],
+            [
+              -117.148129245,
+              32.730944873
+            ],
+            [
+              -117.148129245,
+              32.731014819
+            ],
+            [
+              -117.148129245,
+              32.731223528
+            ],
+            [
+              -117.148129245,
+              32.731287833
+            ],
+            [
+              -117.1481963,
+              32.731287833
+            ],
+            [
+              -117.1481963,
+              32.731337472
+            ],
+            [
+              -117.148361927,
+              32.731337472
+            ],
+            [
+              -117.148361927,
+              32.731286141
+            ],
+            [
+              -117.148783033,
+              32.731286141
+            ],
+            [
+              -117.148783033,
+              32.731331267
+            ],
+            [
+              -117.148947989,
+              32.731331267
+            ],
+            [
+              -117.148947989,
+              32.73127486
+            ],
+            [
+              -117.149154519,
+              32.73127486
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eeddf754-834f-40af-b13a-89299cfdc6dd",
+      "properties": {
+        "id": "eeddf754-834f-40af-b13a-89299cfdc6dd",
+        "title": "Southern California Counties Building",
+        "body": "Displays of fruits, vegetables and cereals from Ventura, Riverside, Orange, Los Angeles, San Bernardino, Imperial and San Diego Counties.\n\nThe building burned down in 1925, today the San Diego Natural History Museum stands on the site. ",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/2befceb450eaa45c.avif"
+          },
+          {
+            "src": "annotations/images/pancal_1915/9d445ce5d947d609.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.147043107,
+              32.731778981
+            ],
+            [
+              -117.147043107,
+              32.732196396
+            ],
+            [
+              -117.147245613,
+              32.732196396
+            ],
+            [
+              -117.147245613,
+              32.732252803
+            ],
+            [
+              -117.147414592,
+              32.732250548
+            ],
+            [
+              -117.147434709,
+              32.732276494
+            ],
+            [
+              -117.147733775,
+              32.73227311
+            ],
+            [
+              -117.147733775,
+              32.732197524
+            ],
+            [
+              -117.147768644,
+              32.732197524
+            ],
+            [
+              -117.147759256,
+              32.732124194
+            ],
+            [
+              -117.14779949,
+              32.732127579
+            ],
+            [
+              -117.14779949,
+              32.732012508
+            ],
+            [
+              -117.147759256,
+              32.732007996
+            ],
+            [
+              -117.147760597,
+              32.731957229
+            ],
+            [
+              -117.14772841,
+              32.731953845
+            ],
+            [
+              -117.147735117,
+              32.731771084
+            ],
+            [
+              -117.147043107,
+              32.731778981
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "49caaa8d-0188-4a93-9263-5fcf04ad274d",
+      "properties": {
+        "id": "49caaa8d-0188-4a93-9263-5fcf04ad274d",
+        "title": "Model Citrus Grove",
+        "body": "Part of the southern California counties exhibits, this area contained a large quantity of citrus trees to show what could be grown in the region.",
+        "images": [
+          {
+            "src": "annotations/images/pancal_1915/ba64100e0c1db6c2.avif"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.148821501,
+              32.734778583
+            ],
+            [
+              -117.148739176,
+              32.734594636
+            ],
+            [
+              -117.148530789,
+              32.734319796
+            ],
+            [
+              -117.148150034,
+              32.73389996
+            ],
+            [
+              -117.147941647,
+              32.733499599
+            ],
+            [
+              -117.147877331,
+              32.733068938
+            ],
+            [
+              -117.147177564,
+              32.733071102
+            ],
+            [
+              -117.147198145,
+              32.733397885
+            ],
+            [
+              -117.147267607,
+              32.733653251
+            ],
+            [
+              -117.147403959,
+              32.733980032
+            ],
+            [
+              -117.147566037,
+              32.734235396
+            ],
+            [
+              -117.14783874,
+              32.73454919
+            ],
+            [
+              -117.148070281,
+              32.734811044
+            ],
+            [
+              -117.14820406,
+              32.735016632
+            ],
+            [
+              -117.148821501,
+              32.734778583
             ]
           ]
         ]
