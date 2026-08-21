@@ -76,6 +76,31 @@
       "tileSize": 512
     },
     {
+      "id": "sanborn_1906",
+      "file": "sanborn_1906.pmtiles",
+      "title": "Sanborn Fire Insurance Map (1906)",
+      "year": 1906,
+      "author": "Sanborn Map Company",
+      "publisher": "Sanborn Map Company",
+      "source": "Library of Congress",
+      "src_url": "https://www.loc.gov/item/sanborn00810_003/",
+      "description": "A fire insurance atlas of San Diego drawn for underwriters assessing risk, and in the process the most detailed record of the city that exists for this period. Its 115 sheets show individual building footprints with their construction material, use, and street numbers, along with the water mains and hydrants that would have to fight any fire. The volume covers the city limits as they stood in 1906 and extends across the bay to Coronado Beach.",
+      "bounds": [
+        -117.233151,
+        32.674039,
+        -117.125162,
+        32.764667
+      ],
+      "center": [
+        -117.179157,
+        32.719353
+      ],
+      "minzoom": 11,
+      "maxzoom": 20,
+      "tileType": "webp",
+      "tileSize": 256
+    },
+    {
       "id": "pancal_1915",
       "file": "pancal_1915.pmtiles",
       "title": "Panama-California Exposition Ground Plan",
